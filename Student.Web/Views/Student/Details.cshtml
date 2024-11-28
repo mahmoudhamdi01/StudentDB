@@ -1,0 +1,24 @@
+﻿@model StudentModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Name">Name</label>
+    <input readonly class="form-control" asp-for="Name" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Age">Age</label>
+    <input readonly class="form-control" asp-for="Age" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Address">Address</label>
+    <input readonly class="form-control" asp-for="Address" />
+</div>
+<div class="form-group mb-3">
+    <label class="col-form-label" asp-for="AttendanceTime">AttendanceTime</label>
+    <input readonly class="form-control" asp-for="AttendanceTime" />
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a>
+<a asp-action="Index" class="btn btn-info-emphasis">to List</a>
